@@ -21,7 +21,7 @@ The polygon overlay is separate from CollectionBuilder's item-map data: it draws
    }
    ```
 
-2. **Add the data file.** Save the FeatureCollection in `assets/js/` as a JavaScript file, for example `assets/js/my-polygons.js`. Assign the GeoJSON object to the global variable `mapPolygons`:
+2. **Add the data file.** Save the FeatureCollection in `assets/js/` as a JavaScript file, or replace the existing example data in `assets/js/map-polygons.js`. Assign the GeoJSON object to the global variable `mapPolygons`:
 
    ```js
    var mapPolygons = {
@@ -34,7 +34,7 @@ The polygon overlay is separate from CollectionBuilder's item-map data: it draws
 
    The map loads this script directly, so a plain `.geojson` file or a module export will not work without changing the loader.
 
-3. **Include the overlay in the site.** If the target project does not already have this implementation, copy `assets/js/map-leaflet.js` (Leaflet) or `assets/js/map-esri.js` (ArcGIS), `_includes/js/map-js.html`, `_layouts/map.html`, and your polygon data file. This repository's `assets/js/map-polygons.js` is example mining-district data; replace it with your own data or use a different filename. Add a map page that uses `layout: map`. For Leaflet, keep the Leaflet libraries already included with the template.
+3. **Include the overlay in the site.** Copy `assets/js/map-leaflet.js` (Leaflet) or `assets/js/map-esri.js` (ArcGIS), `_includes/js/map-js.html`, `_layouts/map.html`, and your polygon data file. This repository's `assets/js/map-polygons.js` is example mining-district data; replace it with your own data or use a different filename. Add a map page that uses `layout: map`. For Leaflet, keep the Leaflet libraries already included with the template.
 
 4. **Point the map at your file.** In `_data/theme.yml`, set `polygon-data-file` to your filename in `assets/js/` (not the full path), and choose the provider. The default is `map-polygons.js`, so change it when using a different filename:
 
