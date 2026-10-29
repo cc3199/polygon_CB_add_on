@@ -36,7 +36,7 @@ The polygon overlay is separate from CollectionBuilder's item-map data: it draws
 
 3. **Include the overlay in the site.** Copy `assets/js/map-leaflet.js` (Leaflet) or `assets/js/map-esri.js` (ArcGIS), `_includes/js/map-js.html`, `_layouts/map.html`, and your polygon data file. This repository's `assets/js/map-polygons.js` is example mining-district data; replace it with your own data or use a different filename. Add a map page that uses `layout: map`. For Leaflet, keep the Leaflet libraries already included with the template.
 
-4. **Point the map at your file.** Add the provided code in `_data_theme.yml` into the existing CollectionBuilder `_data_theme.yml file`. In `_data/theme.yml`, set `polygon-data-file` to your filename in `assets/js/` (not the full path), and choose the provider. The default is `map-polygons.js`, so change it when using a different filename:
+4. **Point the map at your file.** Add the provided code in `_data/theme.yml` into the existing CollectionBuilder `_data/theme.yml file`. In `_data/theme.yml`, set `polygon-data-file` to your filename in `assets/js/` (not the full path), and choose the provider. The default is `map-polygons.js`, so change it when using a different filename:
 
    ```yaml
    map_provider: leaflet # or esri
